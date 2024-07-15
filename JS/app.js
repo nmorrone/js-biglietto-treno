@@ -14,3 +14,26 @@ console.log(ticketDraft)
 
 /* comincio a calcolare eventuali sconti sul prezzo
 Chiedo all'utente la sua età */
+
+let age = prompt('Quanti anni hai?')
+
+console.log(age)
+
+
+/*inserisco le condizioni di sconto sul biglietto
+in base all'età dell'utente */
+if (age >= 65) {
+    ticketPrice = ticketDraft - (ticketDraft / 100 * 40)
+}
+
+else if (age <= 18) {
+    ticketPrice = ticketDraft - (ticketDraft / 100 * 20)
+}
+
+else {
+    ticketPrice = ticketDraft
+}
+
+//ricalcolo il prezzo del biglietto e stampo
+
+console.log(ticketPrice)
