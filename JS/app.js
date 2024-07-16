@@ -4,6 +4,8 @@ console.log('Calcola del Prezzo del Biglietto')
 
 let distance = prompt('Quanti Km devi percorrere?')
 
+distance = parseInt(distance)
+
 console.log(distance)
 
 //calcola il prezzo del biglietto senza eventuali sconti
@@ -16,6 +18,8 @@ console.log(ticketDraft)
 Chiedo all'utente la sua età */
 
 let age = prompt('Quanti anni hai?')
+
+age = parseInt(age)
 
 console.log(age)
 
