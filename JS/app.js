@@ -9,8 +9,9 @@ distance = parseInt(distance)
 console.log(distance)
 
 //calcola il prezzo del biglietto senza eventuali sconti
+//inserisco funzione per ottenere il risultato con 2 decimali
 
-ticketDraft = distance * 0.21
+ticketDraft = (distance * 0.21).toFixed(2)
 
 console.log(ticketDraft)
 
@@ -27,7 +28,7 @@ console.log(age)
 /*inserisco le condizioni di sconto sul biglietto
 in base all'età dell'utente */
 
-let ticketPrice = ticketDraft
+const ticketPrice = ticketDraft
 
 if (age >= 65) {
     ticketPrice = ticketDraft - (ticketDraft / 100 * 40)
@@ -41,3 +42,11 @@ else if (age <= 18) {
 //ricalcolo il prezzo del biglietto e stampo
 
 console.log(ticketPrice)
+
+//stampo il risultato finale nella pagina HTML
+
+let prezzoFinale = document.getElementById('biglietto')
+
+
+prezzoFinale.innerHTML = '€' + ticketPrice
+
